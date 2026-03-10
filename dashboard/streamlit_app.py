@@ -17,6 +17,10 @@ def load_data():
     
     # PERBAIKAN: Paksa semua nama kolom jadi huruf kecil dan hapus spasi
     df.columns = df.columns.str.strip().str.lower()
+    
+    if 'ph' not in df.columns:
+        st.error(f"Kolom 'ph' tidak ditemukan! Kolom yang ada adalah: {df.columns.tolist()}")
+    
     return df
 
 df = load_data()
