@@ -12,7 +12,7 @@ st.title("🌱 Smart Farming: Soil Management Dashboard")
 @st.cache_data
 def load_data():
     # Gunakan link Raw GitHub Anda di sini
-    url = "PASTE_LINK_RAW_GITHUB_ANDA_DISINI"
+    url = "data/raw/Smart_Farming_Sensor_Data.csv"
     df = pd.read_csv(url)
     
     # PERBAIKAN: Paksa semua nama kolom jadi huruf kecil dan hapus spasi
