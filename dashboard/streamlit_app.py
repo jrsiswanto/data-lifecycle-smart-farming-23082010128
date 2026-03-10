@@ -11,10 +11,18 @@ st.title("🌱 Smart Farming: Soil Management Dashboard")
 # 1. Load Data
 @st.cache_data
 def load_data():
-    # Sesuaikan path dengan folder baru Anda
-    url = "data/raw/Smart_Farming_Sensor_Data.csv"
+    # Gunakan link Raw GitHub Anda di sini
+    url = "PASTE_LINK_RAW_GITHUB_ANDA_DISINI"
     df = pd.read_csv(url)
+    
+    # PERBAIKAN: Paksa semua nama kolom jadi huruf kecil dan hapus spasi
+    df.columns = df.columns.str.strip().str.lower()
     return df
+
+df = load_data()
+
+# Sekarang avg_ph = df['ph'].mean() tidak akan error lagi 
+# karena 'PH' atau 'ph ' sudah diubah menjadi 'ph'
 
 df = load_data()
 
