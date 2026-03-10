@@ -12,7 +12,8 @@ st.title("🌱 Smart Farming: Soil Management Dashboard")
 @st.cache_data
 def load_data():
     # Sesuaikan path dengan folder baru Anda
-    df = pd.read_csv("../data/raw/smartfarmingsensor/Smart_Farming_Sensor_Data.csv")
+    url = "data/raw/Smart_Farming_Sensor_Data.csv"
+    df = pd.read_csv(url)
     return df
 
 df = load_data()
